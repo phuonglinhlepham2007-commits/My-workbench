@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#fff7fb" />
+  <title>Linh's Pastel Workbench</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-pink"></div><div class="ambient ambient-blue"></div>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#home" aria-label="Linh's Workbench home"><span class="brand-mark">✿</span><span>little<br><b>workbench</b></span></a>
+      <div class="profile glass"><div class="avatar">L<span>✦</span></div><div><strong>Linh Lê</strong><small>Your cozy corner</small></div><button class="more" aria-label="Profile options">···</button></div>
+      <nav aria-label="Main navigation">
+        <p class="nav-label">YOUR SPACE</p>
+        <a class="nav-item active" href="#home" data-section="home"><span>⌂</span>Overview</a>
+        <a class="nav-item" href="#focus" data-section="focus"><span>◉</span>Focus room</a>
+        <a class="nav-item" href="#projects" data-section="projects"><span>▧</span>Projects</a>
+        <a class="nav-item" href="#notes" data-section="notes"><span>▤</span>Notes</a>
+        <p class="nav-label second-label">LITTLE EXTRAS</p>
+        <a class="nav-item" href="#calendar" data-section="calendar"><span>▦</span>Calendar</a>
+        <a class="nav-item" href="#ideas" data-section="ideas"><span>✧</span>Idea garden</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="sidebar-note"><span>☁</span><p>A gentle space<br>for your big ideas.</p><i>♡</i></div><small>MADE FOR YOUR EVERYDAY ✿</small></div>
+    </aside>
+    <main id="home">
+      <header class="topbar"><button class="menu-button" id="menuButton" aria-label="Open navigation">☰</button><div class="breadcrumb">My space <span>/</span> <b>Overview</b></div><div class="top-actions"><span class="today" id="today"></span><button class="icon-button" id="themeButton" title="Toggle soft theme" aria-label="Toggle soft theme">☼</button><button class="tiny-avatar">L</button></div></header>
+      <div class="content">
+        <section class="welcome-row"><div><div class="eyebrow"><span class="sparkle">✦</span> YOUR PERSONAL DASHBOARD</div><h1>Good day, Linh <span class="wave">✿</span></h1><p class="subtitle">A little space to gather your thoughts and make room for what matters.</p></div><button class="date-pill"><span>☼</span> <span id="dateLabel"></span></button></section>
+        <section class="stats-grid" aria-label="Personal statistics">
+          <article class="stat-card glass pink"><div class="stat-top"><span>Focus time</span><span class="stat-icon">◷</span></div><strong data-stat="focus">—</strong><small>Set your first goal <span>↗</span></small><div class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+          <article class="stat-card glass blue"><div class="stat-top"><span>Things to do</span><span class="stat-icon">☷</span></div><strong data-stat="tasks">—</strong><small>Your list is waiting <span>↗</span></small><div class="stat-line"><i></i></div></article>
+          <article class="stat-card glass lilac"><div class="stat-top"><span>In progress</span><span class="stat-icon">◌</span></div><strong data-stat="projects">—</strong><small>Projects you’re growing <span>↗</span></small><div class="stat-line"><i></i></div></article>
+          <article class="stat-card glass peach"><div class="stat-top"><span>Little wins</span><span class="stat-icon">✧</span></div><strong data-stat="wins">—</strong><small>Celebrate every step <span>↗</span></small><div class="win-dots"><i></i><i></i><i></i><i></i><i></i></div></article>
+        </section>
+        <section class="quick-section"><div class="section-heading"><div><h2>Quick entries <span class="heading-flower">✿</span></h2><p>Your favorite places, just a tap away.</p></div><button class="text-button" id="editEntries">Edit entries <span>↗</span></button></div>
+          <div class="quick-grid" id="quickGrid">
+            <button class="quick-card glass" data-entry="first"><span class="quick-icon rose">✎</span><span><b>Quick note</b><small>Nothing here yet</small></span><span class="arrow">↗</span></button>
+            <button class="quick-card glass" data-entry="second"><span class="quick-icon aqua">☷</span><span><b>New task</b><small>Nothing here yet</small></span><span class="arrow">↗</span></button>
+            <button class="quick-card glass" data-entry="third"><span class="quick-icon yellow">✧</span><span><b>Save an idea</b><small>Nothing here yet</small></span><span class="arrow">↗</span></button>
+          </div>
+        </section>
+        <section class="modules-grid">
+          <article class="module glass focus-module" id="focus"><div class="module-head"><div><div class="module-kicker">YOUR GENTLE RESET <span>✦</span></div><h2>Focus room</h2><p>A calm place to begin whenever you’re ready.</p></div><button class="dots" aria-label="More focus options">···</button></div>
+            <div class="focus-center"><div class="timer-ring"><div><span id="timer">25:00</span><small>MINUTES</small></div></div><div class="timer-caption"><span>✿</span> One thing at a time</div></div>
+            <div class="focus-controls"><button class="primary-button" id="timerToggle"><span>▶</span> Start focus</button><button class="round-button" id="timerReset" title="Reset timer" aria-label="Reset timer">↺</button></div>
+            <div class="module-foot"><span><i class="online-dot"></i> Ready when you are</span><button id="timerLength">25 min⌄</button></div>
+          </article>
+          <article class="module glass tasks-module"><div class="module-head"><div><div class="module-kicker">YOUR NEXT STEPS <span>♡</span></div><h2>Today’s list</h2><p>Small steps count, too.</p></div><button class="dots" aria-label="More list options">···</button></div>
+            <div class="empty-state"><div class="empty-illustration"><span class="sun">☼</span><span class="leaf">⌁</span><span class="pot">▰</span></div><b>Your list is a blank page</b><p>Add a task below to get started.</p></div>
+            <form class="inline-add" id="taskForm"><span>＋</span><input id="taskInput" aria-label="New task" placeholder="Add a little task…" maxlength="80" /><button aria-label="Add task">↗</button></form><div class="task-list" id="taskList"></div>
+          </article>
+          <article class="module glass projects-module" id="projects"><div class="module-head"><div><div class="module-kicker">THINGS YOU’RE MAKING <span>✧</span></div><h2>Project nook</h2><p>Your projects will feel at home here.</p></div><button class="dots" aria-label="More project options">···</button></div><div class="project-placeholder"><div class="stack-art"><i></i><i></i><i></i><span>✿</span></div><div><b>Room for your next idea</b><p>Projects you add will appear here.</p></div><button class="small-add" id="addProject">＋ Add a project</button></div><div class="project-progress"><span>YOUR CREATIVE CORNER</span><div class="progress-track"><i></i></div><span>JUST BEGINNING</span></div></article>
+        </section>
+        <section class="quick-input glass"><div class="input-flower">✿</div><form id="captureForm"><label for="captureInput"><b>Catch a thought, Linh?</b><small>Let it land here for now. You can sort it out later.</small></label><input id="captureInput" maxlength="180" placeholder="Type anything on your mind…" /><button class="capture-send" aria-label="Save thought">↗</button></form><div class="input-actions"><button data-capture="task"><span>☷</span> Add a task</button><button data-capture="note"><span>✎</span> Quick note</button><button data-capture="idea"><span>✧</span> Save an idea</button></div></section>
+        <footer><span>Made with a little softness <b>♡</b></span><span>YOUR SPACE, YOUR PACE <i>✿</i></span></footer>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog id="editDialog"><form method="dialog" class="dialog-card"><button class="dialog-close" aria-label="Close">×</button><span class="dialog-flower">✿</span><h2>Make it yours</h2><p>Rename your three quick entries. They’ll be saved on this device.</p><label>First entry<input id="entryOne" maxlength="24" /></label><label>Second entry<input id="entryTwo" maxlength="24" /></label><label>Third entry<input id="entryThree" maxlength="24" /></label><button class="primary-button save-entries" id="saveEntries" value="save">Save entries</button></form></dialog>
+  <script src="script.js"></script>
+</body>
+</html>
